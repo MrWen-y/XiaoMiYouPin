@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米账号-注册</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/registerpwd.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/captcha-mini.js"></script>
+    <script src="./js/register.js"></script>
+</head>
+
+<body class="zh_CN">
+    <div class="wrapper">
+        <div class="wrap">
+            <div class="layout">
+                <div class="n-frame device-frame reg_frame" id="main_container">
+                    <div class="external_logo_area"><a class="milogo"></a></div>
+                    <div class="title-item t_c">
+                        <h4 class="title_big30">注册小米帐号</h4>
+                    </div>
+                    <div class="register" style="display: block;">
+                        <div class="regbox">
+                            <div class="email_step1 emailregbox">
+                                <h4 class="tit_normal">
+                                    国家/地区
+                                </h4>
+                                <div class="listwrap select-regions" _region="CN">
+                                    <div class="listtit reg-select-regions">
+                                        <div class="tits display_box c_b">
+                                            <p class="result-select-regions">中国</p>
+                                            <i class="icon_cirarr"></i>
+                                        </div>
+                                    </div>
+                                    <h4 class="tit_normal">
+                                        邮箱
+                                    </h4>
+                                    <div class="inputbg">
+                                        <input type="hidden" class="select-regions-input" name="region" value="CN">
+                                        <label class="labelbox" for="">
+                                            <input type="email" placeholder="请输入邮箱" name="email" class="email">
+                                        </label>
+                                    </div>
+                                    <div class="err_tip" style="display: none;">
+                                        <div class="dis_box"><em class="icon_error"></em><span>请输入邮箱</span></div>
+                                    </div>
+                                    <div class="fixed_bot">
+                                        <!--<input type="hidden" class="select-edm-result"  name="edm" value="true"/>-->
+                                        <input class="btn332 btn_reg_1 submit-step" type="submit" value="立即注册">
+                                        <div class="other_register_area">
+                                            <input class="btn332 btn_reg_2 change-view" data-to="PHONE" type="button"
+                                                value="用手机号码注册">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="privacy_box">
+                                <div class="msg">
+                                    <label class="n_checked select-privacy">
+                                        <!--<i class="icon_select"></i>-->已阅读并同意：小米 <a href="javascript:void(0)"
+                                            class="inspect_link agreement_link">用户协议</a>和<a href="javascript:void(0)"
+                                            class="inspect_link privacy_link"> 隐私政策 </a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="regbox" style="display: none;">
+                        <div class="step3 email_step2">
+                            <dl>
+                                <dt>
+                                    <h4>即将使用&nbsp;<span class="address-place"></span>&nbsp;进行注册</h4>
+                                </dt>
+                                <dd>
+                                    <div class="inputbg">
+                                        <label class="labelbox" for=""><input type="password" class="set-password"
+                                                name="password" data-error=".error-password"
+                                                placeholder="请输入密码"></label>
+                                    </div>
+                                    <div class="err_tip error-password" style="display:none;">
+                                            <div class="dis_box"><em class="icon_error"></em><span ></span></div>
+                                        </div>
+                                </dd>
+                                <dd>
+                                    <div class="inputbg">
+                                        <label class="labelbox" for=""><input type="password" name="repassword" class="repassword"
+                                                placeholder="请输入确认密码"></label>
+                                    </div>
+                                    <div class="err_tip" style="display:none;">
+                                        <div class="dis_box"><em class="icon_error"></em><span></span></div>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="inputbg inputcode">
+                                        <label class="labelbox" for=""><input class="code" name="inputcode"
+                                                type="text" autocomplete="off" placeholder="图片验证码"></label>
+                                        <canvas width="125" height="42" id="captcha" style="vertical-align: middle"></canvas>
+                                    </div>
+                                    <div class="err_tip" style="display: none;">
+                                        <div class="dis_box"><em class="icon_error"></em><span>请输入图片验证码</span></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="fixed_bot mar_mail_dis2">
+                                <input class="btn332 btn_reg_1  submit-step" type="submit" value="提交">
+                                <input class="btn332 btn_reg_2  change-view" data-to="email-step1" type="button"
+                                    value="上一步">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="n-footer">
+        <div class="nf-link-area clearfix">
+            <ul class="lang-select-list">
+                <li class="page-footer-list default-show-en"><a class="locale-link" href="javascript:void(0)"
+                        data-lang="en">English‎</a></li>
+                <li class="page-footer-list"><button class="show-more-lang">…</button>|</li>
+                <li><a class="a_critical" href="https://static.account.xiaomi.com/html/faq/faqList.html"
+                        target="_blank"><em></em>常见问题</a>|</li>
+                <li>
+                    <a class="a_critical" href="/about/protocol/privacy" title="隐私政策" target="_blank">
+                        隐私政策
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="nf-intro"><span>小米公司版权所有</span></p>
+        <div class="cookie_usage_notify cookie-usage-notify">
+            <i class="warning_white"></i>
+            <div class="text_content">
+                <p class="warning_text">请注意！</p>
+                <p>本网站使用cookie，用于在您的电脑中储存信息。这些cookie可以使网站正常运行，以及帮助我们改进用户体验。使用本网站，即表示您接受放置这些cookie。</p>
+            </div>
+            <button class="close_cookie_usage close-cookie-usage"><i class="icon_close"></i><span
+                    class="btn-text">同意并关闭提示</span></button>
+        </div>
+    </div>
+</body>
+
+</html>

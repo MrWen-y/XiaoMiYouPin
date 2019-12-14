@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米账号-登录</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/login.js"></script>
+</head>
+
+<body class="zh_CN">
+    <div class="wrapper">
+        <div class="wrap">
+            <div class="layout_panel">
+                <div class="layout" id="layout">
+                    <div class="main-content">
+                        <div class="mainbox">
+                            <div id="custom_display_2"><a class="ercode" id="qrcode-trigger"
+                                    href="javascript:void(0)"></a>
+                            </div>
+                            <!-- headers -->
+                            <div class="lgnheader">
+                                <div class="header_tit t_c"> <em id="custom_display_1" class="milogo"> <svg width="100%"
+                                            height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="3" ry="3" style="fill:#ff6700"></rect>
+                                            <rect x="10" y="15" width="4.2" height="18" style="fill:#FFFFFF"></rect>
+                                            <rect x="33.75" y="15" width="4.2" height="18" style="fill:#FFFFFF"></rect>
+                                            <rect x="11.25" y="15" width="15" height="4.1" style="fill:#FFFFFF"></rect>
+                                            <rect x="26.2" y="20.55" width="4.2" height="12.5" style="fill:#FFFFFF">
+                                            </rect>
+                                            <rect x="20.6" y="15" width="9.8" height="9.8" rx="4.4" ry="4.4"
+                                                style="fill:#FFFFFF"></rect>
+                                            <rect x="20.2" y="19" width="6" height="6" rx="2" ry="2"
+                                                style="fill:#ff6700"></rect>
+                                            <rect x="18" y="19.1" width="4" height="2.2" style="fill:#ff6700"></rect>
+                                            <rect x="24.2" y="23" width="1.94" height="10" style="fill:#ff6700"></rect>
+                                            <rect x="18.1" y="22.8" width="4.2" height="10.2" style="fill:#FFFFFF">
+                                            </rect>
+                                        </svg> </em>
+                                    <h4 class="header_tit_txt" id="login-title">小米帐号登录</h4>
+                                    <div class="site_info"></div>
+                                </div>
+                            </div>
+                            <!-- form -->
+                            <div class="tabs-con tabs_con now" data-con="pwd">
+                                <div>
+                                    <div class="login_area" id="login-main-form">
+                                        <div class="loginbox c_b">
+                                            <!-- 输入框 -->
+                                            <div class="lgn_inputbg c_b login-panel pwdLogin">
+                                                <!--验证用户名-->
+                                                <label id="region-code" class="labelbox login_user c_b" for="">
+                                                    <input class="item_account" autocomplete="off" type="text"
+                                                        name="user" id="email" placeholder="邮箱/手机号码/小米ID">
+                                                </label>
+                                                <label class="labelbox pwd_panel c_b">
+                                                    <input class="item_account" type="password" placeholder="密码"
+                                                        autocomplete="off" id="pwd" name="password">
+                                                </label>
+                                            </div>
+                                            <div id="captcha"></div> <!-- 错误信息 -->
+                                            <div class="err_tip">
+                                                <div><em class="icon_error"></em><span class="error-con"></span></div>
+                                            </div>
+                                            <div class="btns_bg"> <input class="btnadpt" id="login-button" type="button"
+                                                    value="登录"> <span id="custom_display_8"
+                                                    class="sns-default-container sns_default_container"
+                                                    style="display: none;"> </span> </div>
+                                            <div class="other_panel clearfix"> <span id="custom_display_256"
+                                                    class="sms_link"> <a href="javascript:;"
+                                                        class="btnadpt btn_gray login_type_link"
+                                                        id="ChangeLoginType">手机短信登录/注册</a> </span>
+                                                <div class="reverse" id="extra-links">
+                                                    <div class="n_links_area reg_forget_links reg-forget-links"
+                                                        id="custom_display_64"> <a class="outer-link"
+                                                            href="register.html">立即注册</a><span>|</span>
+                                                        <a class="outer-link">忘记密码？</a>
+                                                    </div>
+                                                </div>
+                                                <!-- 其他登录方式 s -->
+                                                <div style="display: block;"
+                                                    class="other_login_type sns-login-container" id="custom_display_16">
+                                                    <fieldset class="oth_type_tit">
+                                                        <legend align="center" class="oth_type_txt">其他方式登录</legend>
+                                                    </fieldset>
+                                                    <div id="sns-login-links" class="oth_type_links"><a
+                                                            class="icon_type btn_qq sns-login-link"><i
+                                                                class="btn_sns_icontype icon_default_qq"></i></a><a
+                                                            class="icon_type btn_weibo sns-login-link"><i
+                                                                class="btn_sns_icontype icon_default_weibo"></i></a><a
+                                                            class="icon_type btn_alipay sns-login-link"
+                                                            ><i class="btn_sns_icontype icon_default_alipay"></i></a><a
+                                                            class="icon_type btn_weixin sns-login-link"
+                                                            ><i class="btn_sns_icontype icon_default_weixin"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="custom_display_4" class="n-footer">
+        <div class="nf-link-area clearfix">
+            <ul class="lang-select-list">
+                <li><a href="javascript:void(0)" class="lang-select-li current">简体</a>|</li>
+                <li><a class="lang-select-li">繁体</a>|</li>
+                <li><a class="lang-select-li">English</a>|</li>
+                <li><a>常见问题</a>|</li>
+                <li><a id="msg-privacy">隐私政策</a></li>
+            </ul>
+        </div>
+        <p class="nf-intro">听风版权所有-温ICP备20191212-<a class="beian-record-link" ><span><img
+                        src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png"></span>京公网安备11010802020134号</a>-京ICP证110507号
+        </p>
+    </div>
+</body>
+
+</html>
