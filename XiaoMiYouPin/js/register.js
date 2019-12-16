@@ -41,6 +41,9 @@ $(()=>{
            $('.register').css("display", "none") 
            $('.regbox').eq(1).css("display", "block")
         }
+        if(val == ""){
+            alert('请输入邮箱')
+        }
     })
     $('.btn_reg_2').eq(1).click(function(){
         $('.register').css("display", "block") 
