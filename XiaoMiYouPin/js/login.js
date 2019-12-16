@@ -17,7 +17,8 @@ $(() => {
                     window.location.href = "index01.html";
                 } else {
                     /* 注册失败： */
-                    alert(response.msg);
+                    $('.err_tip').css('display','block')
+                    // alert(response.msg);
                 }
 
                 /* 登录失败 */

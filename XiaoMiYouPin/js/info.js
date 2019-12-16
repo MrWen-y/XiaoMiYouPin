@@ -8,7 +8,6 @@ $(()=>{
         dataType: "json",
         success: function (response) {
             renderUI(response)
-            
         }
     });
     function renderUI(data){
@@ -96,9 +95,10 @@ $(()=>{
         alert('加入购物车成功~')
         var data = search.split("=")
         let good_id = data[1]
+        let num = $('.count-input').val()
         $.ajax({
             url: "./server/cart.php",
-            data: {  type: "add",good_id: good_id },
+            data: {  type: "add",good_id,num },
             dataType: "json",
             success: function(response) {
                 // console.log(response);

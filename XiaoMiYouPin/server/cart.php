@@ -12,6 +12,8 @@ mysqli_set_charset($db,'utf8');
 $type = $_REQUEST["type"];
 if($type == "add")
 {
+  $n = $_REQUEST["num"];
+  echo $n;
   $good_id = $_REQUEST["good_id"];
 
   /* 检查之前是否存在对应的数据，如果存在那么就修改num值，如果不存在那么就插入数据 */
@@ -21,10 +23,10 @@ if($type == "add")
   if(mysqli_num_rows($result) == 0)
   {
     /* 往数据库表中新增一条数据 */
-    $sql = "INSERT INTO `cart` (`cart_id`, `good_id`, `num`) VALUES (NULL, $good_id, 1)";
+    $sql = "INSERT INTO `cart` (`cart_id`, `good_id`, `num`) VALUES (NULL, $good_id, $n)";
   }else{
     /* 更新数据 */
-    $sql = "UPDATE `cart` SET `num`= `num`+ 1 WHERE `good_id`=$good_id";
+    $sql = "UPDATE `cart` SET `num`= `num`+ $n WHERE `good_id`=$good_id";
   }
   $res = mysqli_query($db,$sql);
   echo json_encode(array("status"=>"success"));
